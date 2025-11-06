@@ -1,0 +1,188 @@
+:root {
+  --navy: #07263a;
+  --accent: #0b67a6;
+  --light: #f4f8fc;
+  --muted: #6b7280;
+  --highlight: #edf3f9;
+  --soft-text: #4b5563;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
+  background: var(--light);
+  color: #0b1b2b;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume {
+  width: 100%;
+  max-width: var(--max-width);
+  background: #ffffff;
+  border-left: 8px solid var(--navy);
+  padding: 28px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dbe4ec;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+  margin-right: 20px;
+}
+
+.photo img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.identity h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--navy);
+}
+
+.role {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.contact p {
+  margin: 2px 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: right;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-areas:
+    "profile experience"
+    "extra experience"
+    "extra education"
+    "extra skills";
+  grid-gap: 16px;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+.education {
+  grid-area: education;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.extra {
+  grid-area: extra;
+}
+
+.card {
+  background: var(--highlight);
+  padding: 14px;
+  border-radius: 6px;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.item h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.profile p,
+.extra p {
+  font-size: 13px;
+  color: var(--soft-text);
+  line-height: 1.5;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: rgba(11, 103, 166, 0.06);
+  color: var(--navy);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  background: #eaf2f9;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--soft-text);
+}
+
+@media (max-width: 720px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile"
+      "experience"
+      "education"
+      "skills"
+      "extra";
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact {
+    width: 100%;
+    text-align: left;
+    margin-top: 12px;
+  }
+}
