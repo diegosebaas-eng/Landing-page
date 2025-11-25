@@ -3,82 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diego Lima - Frontend </title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <meta name="description" content="Ares 3D - Impresión 3D profesional. Llaveros, piezas, decoración y prototipos a medida.">
+  <title>Ares 3D | Impresión 3D Profesional</title>
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <section class="hero">
-    <div class="floating-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
+  <header>
+    <h1>🚀 ARES 3D</h1>
+    <p>Del diseño digital a tu realidad</p>
+    <a href="#contacto" class="btn">Pedí tu presupuesto</a>
+  </header>
 
-    <div class="content">
-      <div class="badge">
-        <i class="bi bi-code-slash"></i> Frontend 
+  <section class="features">
+    <h2>¿Qué hacemos?</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🔑</div>
+        <h3>Llaveros personalizados</h3>
+        <p>Diseños únicos con tu logo, nombre o idea. Ideales para regalos y merchandising.</p>
       </div>
-      
-      <h1 class="main-title">
-        <span class="name">Diego Lima</span>
-      </h1>
-      
-      <p class="tagline">Creando experiencias digitales y piezas únicas en 3D</p>
-      
-      <p class="description">
-        Emprendedor creativo especializado en desarrollo frontend y diseño 3D. 
-        Fundador de <strong>Ares 3D</strong>, donde transformo ideas en realidad 
-        a través de la impresión 3D personalizada.
-      </p>
-
-      <div class="features">
-        <div class="feature">
-          <div class="feature-icon"><i class="bi bi-laptop"></i></div>
-          <div class="feature-text">Desarrollo Frontend</div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><i class="bi bi-palette"></i></div>
-          <div class="feature-text">Modelado 3D</div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><i class="bi bi-rocket-takeoff"></i></div>
-          <div class="feature-text">Ares 3D</div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><i class="bi bi-stars"></i></div>
-          <div class="feature-text">Diseño Personalizado</div>
-        </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Piezas y repuestos</h3>
+        <p>Fabricamos la pieza exacta que necesitás. Reparaciones y reemplazos a medida.</p>
       </div>
-
-      <div class="cta-container">
-        <a href="about.html" class="cta-button">
-          <span><i class="bi bi-file-person"></i> Ver Mi Curriculum</span>
-        </a>
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Decoración única</h3>
+        <p>Arte tridimensional para tu hogar u oficina. Dale vida a tus espacios.</p>
       </div>
-
-      <div class="tech-stack">
-        <p class="stack-title"><i class="bi bi-tools"></i> Tecnologías & Herramientas</p>
-        <div class="stack-items">
-          <span><i class="bi bi-box"></i> Tinkercad</span>
-          <span><i class="bi bi-gear"></i> Fusion 360</span>
-          <span><i class="bi bi-pencil-square"></i> AutoCAD</span>
-          <span><i class="bi bi-vector-pen"></i> Illustrator</span>
-        </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>Prototipos funcionales</h3>
+        <p>Convertí tu idea en realidad. Perfecto para emprendedores e inventores.</p>
       </div>
     </div>
-
-    <div class="scroll-indicator"></div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <p class="location"><i class="bi bi-geo-alt-fill"></i> Mendoza, Argentina</p>
-      <p class="email"><i class="bi bi-envelope-fill"></i> diegosebaas@gmail.com</p>
-      <p class="phone"><i class="bi bi-telephone-fill"></i> 261-2523422</p>
+  <section class="process">
+    <h2>Nuestro Proceso</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Contactanos</h3>
+        <p>Contanos tu idea o proyecto</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Diseñamos</h3>
+        <p>Creamos el modelo 3D perfecto</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Imprimimos</h3>
+        <p>Fabricamos con precisión</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Entregamos</h3>
+        <p>Recibís tu producto terminado</p>
+      </div>
     </div>
+  </section>
+
+  <section class="stats">
+    <h2>Nuestros Números</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="500">0</div>
+        <div class="stat-label">Proyectos completados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="48">0</div>
+        <div class="stat-label">Horas de impresión</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400" alt="Llavero personalizado">
+        <p>Llaveros corporativos</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=400" alt="Decoración">
+        <p>Arte decorativo</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400" alt="Prototipo">
+        <p>Prototipos funcionales</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contactanos</h2>
+    <form id="formulario">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu email" required>
+      <input type="tel" id="telefono" placeholder="Tu teléfono" required>
+      <textarea id="mensaje" rows="5" placeholder="Contanos tu proyecto o idea..." required></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">Sobre nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+    </div>
+    <p>© 2025 ARES 3D - Innovando tu mundo, capa por capa</p>
   </footer>
+
+  <!-- Scripts Modulares -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>
