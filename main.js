@@ -31,9 +31,9 @@ const Navigation = {
   setupScrollspy() {
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(18, 18, 18, 0.95)';
-        header.style.boxShadow = '0 2px 10px rgba(0, 255, 224, 0.3)';
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(18, 18, 18, 0.98)';
+        header.style.boxShadow = '0 2px 15px rgba(0, 255, 224, 0.2)';
       } else {
         header.style.background = 'linear-gradient(135deg, #1e1e2f, #121212)';
         header.style.boxShadow = 'none';

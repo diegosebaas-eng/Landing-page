@@ -1,50 +1,57 @@
 // ============================================
-// MÓDULO STORAGE
-// Maneja el almacenamiento de datos
+// MÓDULO TASKS
+// Validaciones y utilidades generales
 // ============================================
 
-export const Storage = {
-  // Guarda datos en localStorage
-  save(key, data) {
-    try {
-      localStorage.setItem(key, JSON.stringify(data));
-      return true;
-    } catch (error) {
-      console.error('Error guardando datos:', error);
-      return false;
-    }
+export const Tasks = {
+  // Validación de email
+  validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
   },
 
-  // Obtiene datos de localStorage
-  get(key) {
-    try {
-      const data = localStorage.getItem(key);
-      return data ? JSON.parse(data) : null;
-    } catch (error) {
-      console.error('Error obteniendo datos:', error);
-      return null;
-    }
+  // Validación de teléfono
+  validatePhone(phone) {
+    const cleaned = phone.replace(/\D/g, '');
+    return cleaned.length >= 8 && cleaned.length <= 15;
   },
 
-  // Elimina datos de localStorage
-  remove(key) {
-    try {
-      localStorage.removeItem(key);
-      return true;
-    } catch (error) {
-      console.error('Error eliminando datos:', error);
-      return false;
-    }
+  // Validación de nombre
+  validateName(name) {
+    return name.trim().length >= 2;
   },
 
-  // Limpia todo el localStorage
-  clear() {
-    try {
-      localStorage.clear();
-      return true;
-    } catch (error) {
-      console.error('Error limpiando localStorage:', error);
-      return false;
-    }
+  // Validación de mensaje
+  validateMessage(message) {
+    return message.trim().length >= 10;
+  },
+
+  // Sanitiza texto para prevenir XSS
+  sanitize(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  },
+
+  // Formatea fecha
+  formatDate(date) {
+    return new Date(date).toLocaleDateString('es-AR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  },
+
+  // Debounce para optimizar eventos
+  debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   }
 };
